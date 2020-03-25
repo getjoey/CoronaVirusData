@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+
+<head>
+<title>Home</title>
+</head>
+
+
+<body>
+	Learning Spring boot while a pandemic occurs...
+	
+	<div>
+		<h1>Links</h1>
+		<div> 
+			<button onclick=listAllCountries()>list all countries data</button>
+		</div>
+		
+		<br/>
+		
+		<div>
+			<input type="text" id="textField1" value="Italy"/>
+			<button onclick=getCountry()>GetCountryByName</button>
+		</div>
+		
+		<br/>
+		
+		<div>
+			<input type="text" id="textField2" value="USA"/>
+			<button onclick=updateCountry()>Create/Edit Country info</button>
+		</div>
+		
+	</div>
+	
+	
+	<script>
+	
+		function getCountry() {
+			var countryName = document.getElementById('textField1').value;
+			var baseUrl = window.location.href;
+			window.location.replace(baseUrl+"/getCountry/"+countryName);
+		}
+		
+		function updateCountry() {
+			var countryName = document.getElementById('textField2').value;
+			var baseUrl = window.location.href;
+			window.location.replace(baseUrl+"/updateCountry/"+countryName);
+		}
+		
+		function listAllCountries() {
+			var countryName = document.getElementById('textField2').value;
+			var baseUrl = window.location.href;
+			window.location.replace(baseUrl+"/countries/");
+		}
+		
+	</script>
+
+</body>
+
+</html>

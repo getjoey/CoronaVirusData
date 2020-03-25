@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+
+<head>
+<title>Country Details:</title>
+</head>
+
+<body>
+
+
+	<h1 th:inline="text">[[${country.name}]] details:</h1>
+	<div>
+		<table>
+
+			<tr>
+				<th>Name</th>
+				<th>Cases</th>
+				<th>Deaths</th>
+				<th>Recovered</th>
+			</tr>
+
+			<tr>
+				<td th:text="${country.name}"></td>
+				<td th:text="${country.cases}"></td>
+				<td th:text="${country.deaths}"></td>
+				<td th:text="${country.recovered}"></td>
+			</tr>
+		</table>
+	</div>
+
+
+</body>
+
+</html>

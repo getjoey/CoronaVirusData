@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+
+<head>
+<title>Student Details</title>
+</head>
+
+<body>
+
+	<form th:action="@{/saveCountryData}" th:object="${country}" method="post">
+		Name: <input type="text" th:field="*{name}"/> <br/><br/>
+		Cases: <input type="number" th:field="*{cases}"/> <br/><br/>
+		Deaths: <input type="number" th:field="*{deaths}"/> <br/><br/>
+		Recovered: <input type="number" th:field="*{recovered}"/> <br/><br/>
+		<input type="submit" value="save" /> <br/>
+	</form>
+
+</body>
+
+</html>
