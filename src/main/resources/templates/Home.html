@@ -7,7 +7,7 @@
 
 
 <body>
-	Learning Spring boot while a pandemic occurs...
+	<p>Learning Spring boot while a pandemic occurs. Nothing fancy front end, just practicing backend.</p>
 	
 	<div>
 		<h1>Links</h1>
@@ -29,6 +29,12 @@
 			<button onclick=updateCountry()>Create/Edit Country info</button>
 		</div>
 		
+		<br/>
+		
+		<div>
+			<button onclick=getNewsList()>Click for News List</button>
+		</div>
+		
 	</div>
 	
 	
@@ -47,9 +53,13 @@
 		}
 		
 		function listAllCountries() {
-			var countryName = document.getElementById('textField2').value;
 			var baseUrl = window.location.href;
 			window.location.replace(baseUrl+"/countries/");
+		}
+		
+		function getNewsList() {
+			var baseUrl = window.location.href;
+			window.location.replace(baseUrl+"/news/");
 		}
 		
 	</script>

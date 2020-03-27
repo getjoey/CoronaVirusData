@@ -20,11 +20,6 @@ public class VirusDataController {
 	@Autowired
 	CountryRepositoryI repo;
 	
-	@RequestMapping("/")
-	public String home() {
-		return "Home";
-	}
-	
 	@RequestMapping("/countries")
 	public ModelAndView getStudents() {
 		ModelAndView mav = new ModelAndView("Country/CountryList"); //html name
