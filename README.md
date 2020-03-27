@@ -13,4 +13,7 @@ Mappings
 -Create/Update data on a country
 	-Brings you to a form where you can edit/create data on a country
 	-Input name, then will show existing data to modify, if not, will show 0 as you are creating new data.
+	
+	
+See pics for what it looks like in action :)
 
