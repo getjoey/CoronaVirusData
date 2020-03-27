@@ -27,7 +27,7 @@ public class VirusDataController {
 	
 	@RequestMapping("/countries")
 	public ModelAndView getStudents() {
-		ModelAndView mav = new ModelAndView("CountryList"); //html name
+		ModelAndView mav = new ModelAndView("Country/CountryList"); //html name
 		
 		List<CountryModel> countries = repo.findAll();
 		
@@ -37,7 +37,7 @@ public class VirusDataController {
 	
 	@RequestMapping("/updateCountry")
 	public ModelAndView updateCountry(@ModelAttribute CountryModel country) {
-		ModelAndView mav = new ModelAndView("UpdateCountry");
+		ModelAndView mav = new ModelAndView("Country/UpdateCountry");
 		mav.addObject("country", country);
 		return mav;
 	}
@@ -47,7 +47,7 @@ public class VirusDataController {
 		CountryModel country =  getCountryModelByName(name);
 		country.setName(name);
 	
-		ModelAndView mav = new ModelAndView("UpdateCountry");
+		ModelAndView mav = new ModelAndView("Country/UpdateCountry");
 		mav.addObject("country", country);
 		return mav;
 	}
@@ -56,7 +56,7 @@ public class VirusDataController {
 	public ModelAndView updateCountry(@PathVariable("name") String name) {	
 		CountryModel country =  getCountryModelByName(name);
 		
-		ModelAndView mav = new ModelAndView("Country");
+		ModelAndView mav = new ModelAndView("Country/Country");
 		mav.addObject("country", country);
 		return mav;
 	}
